@@ -6,8 +6,10 @@ import TextInput from './TextInput';
 function App() {
   return (
     <div className="App">
-      <header className="header">ChatApp</header>
-      <img src={coolpic} className="logo" alt="logo" />
+      <header className="header">
+        <img src={coolpic} className="logo" alt="logo" />
+        <b>ChatApp</b>
+      </header>
       <TextInput />
     </div>
   );

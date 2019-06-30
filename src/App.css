@@ -3,29 +3,34 @@
 }
 
 .App {
-  background: #E55D87;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   height: 100vh;
 }
 
 .header {
   display: flex;
+  align-items: center;
   font-size: 40px;
   font-family: Arial, Helvetica, sans-serif;
   background: rgba(255,255,255,0.2);
   color: white;
   padding: 20px 32px;
-  border-bottom: 2px solid white;
+  border-bottom: 3px solid white;
 }
 
 .logo {
+  margin-right:15px;
   display: flex;
-  height: 50px;
+  height: 80px;
   width: 80px;
 }
 
 .text-input {
+  display: flex;
+  align-items: center;
   position:absolute;
   bottom:0;
   height:40px;
@@ -33,19 +38,33 @@
   border-top:1px solid white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  border: 1px solid white
 
 }
 
 .text-input input {
-  width: 80%;
+  position:absolute;
+  border-radius:15px;
+  border: 3px solid white;
+  background: rgb(6, 4, 51);
+  color: white;
+  width: 90%;
   height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 .text-input button {
+  position: absolute;
+  left: 91%;
   width: 100%;
-  width: 40px;
-  border-radius: 20px;
+  width: 70px;
+  height: 40px;
+  border-radius:15px;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  border: 3px solid white
 }
 
 .text-input button:hover {
