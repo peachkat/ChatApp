@@ -6,7 +6,6 @@
   background: #c31432;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
   height: 100vh;
 }
 
@@ -54,7 +53,7 @@
   font-size: 16px;
 }
 
-.text-input button {
+.text-input > button {
   position: absolute;
   left: 91%;
   width: 100%;
@@ -67,7 +66,141 @@
   border: 3px solid white
 }
 
-.text-input button:hover {
+.text-input > button:hover {
   background: teal;
   color: white;
+}
+
+.text-input > button[disabled] {
+  color: white;
+  background: grey;
+  cursor: default;
+}
+
+/* comment */
+.text-input > input {
+  width:calc(100% - 10px);
+  height:31px;
+  color:white;
+  border:1px solid white;
+  border-radius:14px;
+  position:absolute;
+  right:5px;
+  background:#1f1e2e;
+  padding-left:12px;
+  padding-bottom:2px;
+  padding-right:28px;
+  font-size:16px;
+  outline:none;
+}
+.text-input > button {
+  position:absolute;
+  top:6px;
+  right:7px;
+  border-radius:100%;
+  width:27px;
+  height:27px;
+  border:1px solid white;
+  background:white;
+  padding: 5px 2px;
+  cursor: pointer;
+  outline:none;
+}
+.text-input > button:hover {
+  color:white;
+  background:teal;
+}
+.text-input > button[disabled] {
+  color:white;
+  background:grey;
+  cursor:default;
+}
+
+
+
+
+.bubble-wrap{
+  width:100%;
+  padding:8px 20px;
+  display:flex;
+  position: relative;
+}
+.bubble-wrap[from="me"] {
+  flex-direction:row-reverse;
+}
+.bubble{
+  border-radius:11px;
+  padding: 8px 12px;
+  font-size: 14px;
+  position:relative;
+  border: 1px solid #606060;
+  margin-left:5px;
+}
+.bubble:before{
+  content:"";
+  width:12px;
+  height:12px;
+  transform:rotate(45deg);
+  background:black;
+  border: 1px solid #606060;
+  position:absolute;
+  left:-6px;
+  top:10px
+}
+.bubble-wrap[from="me"] .bubble:before{
+  left:auto;
+  right:-6px;
+}
+.bubble:after{
+  content:"";
+  background:black;
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  border-radius:10px;
+}
+.bubble > span {
+  color:white;
+  position:relative;
+  z-index:101;
+}
+.bubble-name{
+  position: absolute;
+  color: white;
+  top: -5px;
+  font-size:10px;
+  left: 30px;
+}
+
+.edit-username{
+  display: flex;
+  align-items: center;
+}
+.name-button{
+  height:29px;
+  margin:0 6px;
+  background:transparent;
+  border:1px solid white;
+  color:white;
+  font-size:10px;
+  padding:7px;
+  cursor: pointer;
+}
+.name-button:hover{
+  background:rgba(255,255,255,0.1)
+}
+.name-input{
+  color:white;
+  height:31px;
+  border:1px solid white;
+  border-radius:14px;
+  padding-left:12px;
+  background:#1f1e2e;
+  padding-bottom:2px;
+  font-size:12px;
+}
+.username{
+  display: flex;
+  align-items: center;
+  margin-right:12px;
+  font-size:16px;
 }
