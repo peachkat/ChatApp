@@ -4,10 +4,10 @@ import { FiSend } from 'react-icons/fi';
 class TextInput extends React.Component {
 
     state={
-        text: ""
+        text: "",
     }
 
-    send = () => {
+    send = (e) => {
         this.props.sendMessage(this.state.text)
         this.setState({text: ""})
     }
