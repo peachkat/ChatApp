@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiSend } from 'react-icons/fi';
+import { FiSend, FiCamera } from 'react-icons/fi';
 
 class TextInput extends React.Component {
 
@@ -12,19 +12,25 @@ class TextInput extends React.Component {
         this.setState({text: ""})
     }
 
-    keyPress=(e)=>{
+    keyPress = (e) => {
         if(e.key==='Enter'){
             this.send()
         }
     }
 
     render(){
+        var {text} = this.state
         return(<div className="text-input">
-            <input value={this.state.text}
+            <button onClick={this.props.showCamera}
+                style={{left:10, right: 'auto'}}>
+                    <FiCamera style={{height:15, width:15}} />
+            </button>
+            <input value={text}
+                placeholder="Write a message here..."
                 onChange={e=> this.setState({text: e.target.value})}
                 onKeyPress={this.keyPress}
             />
-            <button disabled={!this.state.text} onClick={this.send}>
+            <button disabled={!text} onClick={this.send}>
                 <FiSend style={{height:15,width:15}} />
             </button>
             </div>)
