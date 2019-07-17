@@ -107,9 +107,9 @@ class App extends React.Component {
           {messages.map((m, i) => {
             return <Message key={i} m={m} name={name}
               onClick={() => {
-                if(name==='Mimi') { //can also put if (name===m.from) to make only people who sent a message able to delete it
+                if(name===m.from || name==='Mimi') { 
                 this.db.collection('messages').doc(m.id).delete()}
-                } //Now only 'Mimi' can delete messages >:3
+                } //Now only 'Mimi' and the person who sent the message can delete messages >:3
               }
             />
           })}
